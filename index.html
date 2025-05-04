@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rahul PORTFOLIO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: rgb(2, 1, 56);
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 79px;
+      background-color: rgb(90, 0, 143);
+      flex-wrap: wrap;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 10px 0;
+    }
+
+    nav ul li {
+      list-style: none;
+      margin: 0 15px;
+      cursor: pointer;
+      color: white;
+    }
+
+    nav ul li:hover {
+      color: rgb(228, 211, 231);
+      font-size: 1.2rem;
+    }
+
+    .left {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+    .firstsection {
+      display: flex;
+      justify-content: space-around;
+      margin: 50px 23px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .firstsection>div {
+      width: 40%;
+    }
+
+    .leftsection {
+      font-size: 2.2rem;
+      line-height: 1.5;
+    }
+
+    .rightsection img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      object-fit: cover;
+      margin: 40px 0;
+    }
+
+    .purple {
+      color: rgb(124, 19, 222);
+      font-weight: 700;
+    }
+
+    .text-gray {
+      color: gray;
+    }
+
+    #element {
+      color: rgb(124, 19, 222);
+      font-weight: 700;
+    }
+
+    .secondSection {
+      max-width: 80vw;
+      margin: 10vw auto;
+    }
+
+    .secondSection h1 {
+      margin: 10px 0;
+    }
+
+    .box {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      margin-top: 40px;
+    }
+
+    .vertical {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      border-left: 2px solid white;
+      position: relative;
+    }
+
+    .vertical::before {
+      content: '';
+      width: 15px;
+      height: 15px;
+      background: white;
+      border-radius: 50%;
+      position: absolute;
+      left: -9px;
+      top: 20px;
+    }
+
+    .vertical img {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 10px;
+    }
+
+    .vertical-text {
+      font-weight: 600;
+      margin: 10px 0;
+    }
+
+    .vertical-desc {
+      color: lightgray;
+      font-size: 0.9rem;
+      max-width: 300px;
+    }
+
+    .skillsSection {
+      max-width: 80vw;
+      margin: 60px auto;
+      color: white;
+    }
+
+    .skillsSection h1 {
+      margin-bottom: 30px;
+      font-size: 2rem;
+      text-align: center;
+      color: rgb(124, 19, 222);
+    }
+
+    .skill {
+      margin-bottom: 20px;
+    }
+
+    .skill img {
+      width: 30px;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+
+    .skill span {
+      font-weight: 600;
+    }
+
+    .progress-bar {
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      overflow: hidden;
+      margin-top: 5px;
+    }
+
+    .progress-fill {
+      height: 20px;
+      background: linear-gradient(90deg, #7c13de, #c084fc);
+      text-align: right;
+      padding-right: 10px;
+      color: white;
+      font-size: 0.9rem;
+      font-weight: bold;
+      border-radius: 20px;
+      transition: width 1s ease-in-out;
+    }
+
+    hr {
+      border: none;
+      height: 2px;
+      background-color: white;
+      margin: 30px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 0;
+      background: rgb(18, 0, 50);
+      color: gray;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .firstsection {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .firstsection>div {
+        width: 80%;
+      }
+
+      nav {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav ul li {
+        margin: 5px 0;
+      }
+
+      .vertical {
+        border-left: none;
+        border-top: 2px solid white;
+        padding-left: 0;
+        padding-top: 20px;
+      }
+
+      .vertical::before {
+        left: 50%;
+        top: -8px;
+        transform: translateX(-50%);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="left">SATYAM's PORTFOLIO</div>
+      <div class="right">
+        <ul>
+          <li><a href="#home" style="color:white;">Home</a></li>
+          <li><a href="#about" style="color:white;">About</a></li>
+          <li><a href="#services" style="color:white;">Services</a></li>
+          <li><a href="#projects" style="color:white;">Projects</a></li>
+          <li><a href="#contact" style="color:white;">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="firstsection" id="home">
+      <div class="leftsection">
+        <div style="margin-bottom: 10px;">HI, My name is <span class="purple">RAHUL</span></div>
+        <div style="margin-bottom: 10px;">and I am a passionate</div>
+        <span id="element"></span>
+      </div>
+      <div class="rightsection">
+        <img src="bg1.png" alt="Developer Illustration" />
+      </div>
+    </section>
+
+    <hr />
+
+    <section class="secondSection" id="services">
+      <span class="text-gray">My achievements are</span>
+      <h1>Work Experience</h1>
+      <div class="box">
+        <div class="vertical">
+          <img src="html.png" alt="HTML Icon" />
+          <div class="vertical-text">HTML DEVELOPER (2016–2017)</div>
+          <div class="vertical-desc">Built static and responsive web pages with semantic HTML5 elements.</div>
+        </div>
+        <div class="vertical">
+          <img src="css.png" alt="CSS Icon" />
+          <div class="vertical-text">CSS DESIGNER (2018–2019)</div>
+          <div class="vertical-desc">Designed modern, responsive layouts using CSS3, Flexbox, and Grid.</div>
+        </div>
+        <div class="vertical">
+          <img src="jss.png" alt="JS Icon" />
+          <div class="vertical-text">JAVASCRIPT DEVELOPER (2020–2021)</div>
+          <div class="vertical-desc">Created interactive UI and DOM-based animations with vanilla JS and ES6+.</div>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <section class="skillsSection" id="projects">
+      <h1>My Skills Progress Bar</h1>
+      <div class="skill">
+        <img src="html.png" alt="html Icon" />
+        <span>HTML</span>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 90%">90%</div>
+        </div>
+      </div>
+      <div class="skill">
+        <img src="css.png" alt="css Icon" />
+        <span>CSS</span>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 80%">80%</div>
+        </div>
+      </div>
+      <div class="skill">
+        <img src="jss.png" alt="JS Icon" />
+        <span>JavaScript</span>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 75%">75%</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <p>Contact me: rahulkumarjangir9999@gmail.com | WhatsApp: 78400 37701</p>
+    <p>Follow me: <a href="https://instagram.com/rahulj_7" target="_blank">Instagram</a></p>
+  </footer>
+
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['Web Developer', 'Graphic Designer', 'Video Editor', 'Web Designer'],
+      typeSpeed: 100,
+      backSpeed: 50,
+      loop: true
+    });
+  </script>
+</body>
+
+</html>
